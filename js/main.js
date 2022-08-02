@@ -54,3 +54,8 @@ if (total < 72) {
     alert ("BURROOOOOOOOOOOOOOOOO dejá el golf por el bien de todos!")
 };
 
+function tarjeta() {
+    console.log("Hiciste un total de", ida + vuelta, "golpes.");
+}
+
+tarjeta()
