@@ -20,7 +20,7 @@ let hoyo17 = parseInt(prompt("Hoyo 17"));
 let hoyo18 = parseInt(prompt("Hoyo 18"));
 
 
-//totles
+
 let ida = hoyo1 + hoyo2 + hoyo3 + hoyo4 + hoyo5 + hoyo6 + hoyo7 + hoyo8 + hoyo9;
 let vuelta = hoyo10 + hoyo11 + hoyo12 + hoyo13 + hoyo14 + hoyo15 + hoyo16 + hoyo17 + hoyo18; 
 let total = ida + vuelta;
