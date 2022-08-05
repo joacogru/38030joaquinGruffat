@@ -1,60 +1,82 @@
-let nombre = prompt("Ingrese su nombre");
+let nombre = prompt("Ingrese el nombre del Jugador"); 
 
-let hoyo1 = parseInt(prompt("Hoyo 1"));
-let hoyo2 = parseInt(prompt("Hoyo 2"));
-let hoyo3 = parseInt(prompt("Hoyo 3"));
-let hoyo4 = parseInt(prompt("Hoyo 4"));
-let hoyo5 = parseInt(prompt("Hoyo 5"));
-let hoyo6 = parseInt(prompt("Hoyo 6"));
-let hoyo7 = parseInt(prompt("Hoyo 7"));
-let hoyo8 = parseInt(prompt("Hoyo 8"));
-let hoyo9 = parseInt(prompt("Hoyo 9"));
-let hoyo10 = parseInt(prompt("Hoyo 10"));
-let hoyo11 = parseInt(prompt("Hoyo 11"));
-let hoyo12 = parseInt(prompt("Hoyo 12"));
-let hoyo13 = parseInt(prompt("Hoyo 13"));
-let hoyo14 = parseInt(prompt("Hoyo 14"));
-let hoyo15 = parseInt(prompt("Hoyo 15"));
-let hoyo16 = parseInt(prompt("Hoyo 16"));
-let hoyo17 = parseInt(prompt("Hoyo 17"));
-let hoyo18 = parseInt(prompt("Hoyo 18"));
+const parCancha = 72;
+ 
+let hoyo1 = 0;
+let hoyo2 = 0;
+let hoyo3 = 0;
+let hoyo4 = 0;
+let hoyo5 = 0;
+let hoyo6 = 0;
+let hoyo7 = 0;
+let hoyo8 = 0;
+let hoyo9 = 0;
+let hoyo10 = 0;
+let hoyo11 = 0;
+let hoyo12 = 0;
+let hoyo13 = 0;
+let hoyo14 = 0;
+let hoyo15 = 0;
+let hoyo16 = 0;
+let hoyo17 = 0;
+let hoyo18 = 0;
 
+let cancha = prompt("Ingrese que salidas jugó: \nAzul (6500 yardas) \nBlanca (6000 yardas) \nRoja (5500 yardas)").toUpperCase();
 
-
-let ida = hoyo1 + hoyo2 + hoyo3 + hoyo4 + hoyo5 + hoyo6 + hoyo7 + hoyo8 + hoyo9;
-let vuelta = hoyo10 + hoyo11 + hoyo12 + hoyo13 + hoyo14 + hoyo15 + hoyo16 + hoyo17 + hoyo18; 
-let total = ida + vuelta;
-
-
-
-if (ida < 36) {
-    console.log("El/la jugador/a " + nombre + " realizo un score bajo par en la ida con un total de " + ida + " golpes.");
-} else if (ida === 36) {console.log("El/la jugador/a " + nombre + " realizo un score de par de cancha en la ida con un total de " + ida + " golpes.");
-} else {
-    console.log("El/la jugador/a " + nombre + " realizo un score sobre par en la ida con un total de " + ida + " golpes.");
-};
-
-if (vuelta < 36) {
-    console.log("El/la jugador/a " + nombre + " realizo un score bajo par en la vuelta con un total de " + vuelta + " golpes.");
-} else if (vuelta === 36) {console.log("El/la jugador/a " + nombre + " realizo un score de par de cancha en la vuelta con un total de " + vuelta + " golpes.");
-} else {
-    console.log("El/la jugador/a " + nombre + " realizo un score sobre par en la vuelta con un total de " + vuelta + " golpes.");
-};
-
-if (total < 72) {
-    alert("FELICITACIONES! " + nombre + " por la vuelta de " + total + " golpes");
-} else if (total === 72) {
-    alert("EXCELENTE! " + nombre + " por conseguir el par de cancha con " + total + " golpes");
-} else if (total <= 80) {
-    alert("A seguir entrenando " + nombre + "que vas por buen camino con la vuelta realizada de " + total + " golpes");
-} else {
-    alert ("BURROOOOOOOOOOOOOOOOO dejá el golf por el bien de todos!");
-};
+switch (cancha) {
+    case "AZUL":
+        cancha = "6500 yardas"
+        break
+    case "BLANCA":
+        cancha = "6000 yardas"
+        break
+    case "ROJA":
+        cancha = "5500 yardas"
+        break
+    default:
+        console.warn("Ha ingresado una cancha incorrecta. Vuelva a intentar");
+}
 
 
+let scoreTotal = 0;
 
-function tarjeta() {
-    console.log("Hiciste un total de", ida + vuelta, "golpes.")
-};
+function tarjetaTotal() {
+    hoyo1 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 1:"));
+    hoyo2 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 2:"));
+    hoyo3 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 3:"));
+    hoyo4 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 4:"));
+    hoyo5 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 5:"));
+    hoyo6 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 6:"));
+    hoyo7 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 7:"));
+    hoyo8 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 8:"));
+    hoyo9 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 9:"));
+    hoyo10 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 10:"));
+    hoyo11 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 11:"));
+    hoyo12 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 12:"));
+    hoyo13 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 13:"));
+    hoyo14 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 14:"));
+    hoyo15 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 15:"));
+    hoyo16 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 16:"));
+    hoyo17 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 17:"));
+    hoyo18 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 18:"));
+    scoreTotal = hoyo1 + hoyo2 + hoyo3 + hoyo4 + hoyo5 + hoyo6 + hoyo7 + hoyo8 + hoyo9 + hoyo10 + hoyo11 + hoyo12 + hoyo13 + hoyo14 + hoyo15 + hoyo16 + hoyo17 + hoyo18
+    if (scoreTotal > parCancha) {
+    console.log("El jugador", nombre, "realizó un score total de", scoreTotal, "golpes en un campo de juego de", cancha, "par", parCancha, "(", scoreTotal - parCancha,"sobre el par ).")
+    } else if (scoreTotal < parCancha) {
+        console.log("El jugador", nombre, "realizó un score total de", scoreTotal, "golpes en un campo de", cancha, "par", parCancha, "(", parCancha - scoreTotal,"bajo el par ).")
+    } else {
+        console.log("El jugador", nombre, "realizó un score total de", scoreTotal, "golpes en un campo de", cancha, "par", parCancha, "(par de cancha).")
+    }
+}
 
-tarjeta()
+tarjetaTotal()
+
+
+
+
+
+
+
+
+
+
