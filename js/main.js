@@ -1,10 +1,3 @@
-/* let cliente = prompt("Ingrese su nombre")
-let categoria = parseInt(prompt("Hola " + cliente + ", Ingrese su fecha de nacimiento:"))
-
-let edad = 2022 - categoria
-
-alert("Usted terminara este año con "+edad+" años") */
-
 let nombre = prompt("Ingrese su nombre")
 
 let hoyo1 = parseInt(prompt("Hoyo 1"));
@@ -25,9 +18,13 @@ let hoyo15 = parseInt(prompt("Hoyo 15"));
 let hoyo16 = parseInt(prompt("Hoyo 16"));
 let hoyo17 = parseInt(prompt("Hoyo 17"));
 let hoyo18 = parseInt(prompt("Hoyo 18"));
+
+
+//totles
 let ida = hoyo1 + hoyo2 + hoyo3 + hoyo4 + hoyo5 + hoyo6 + hoyo7 + hoyo8 + hoyo9;
 let vuelta = hoyo10 + hoyo11 + hoyo12 + hoyo13 + hoyo14 + hoyo15 + hoyo16 + hoyo17 + hoyo18; 
 let total = ida + vuelta;
+
 
 
 if (ida < 36) {
@@ -53,6 +50,8 @@ if (total < 72) {
 } else {
     alert ("BURROOOOOOOOOOOOOOOOO dejá el golf por el bien de todos!")
 };
+
+
 
 function tarjeta() {
     console.log("Hiciste un total de", ida + vuelta, "golpes.");
