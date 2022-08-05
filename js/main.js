@@ -1,4 +1,4 @@
-let nombre = prompt("Ingrese su nombre")
+let nombre = prompt("Ingrese su nombre");
 
 let hoyo1 = parseInt(prompt("Hoyo 1"));
 let hoyo2 = parseInt(prompt("Hoyo 2"));
@@ -29,32 +29,32 @@ let total = ida + vuelta;
 
 if (ida < 36) {
     console.log("El/la jugador/a " + nombre + " realizo un score bajo par en la ida con un total de " + ida + " golpes.");
-} else if (ida === 36) {console.log("El/la jugador/a " + nombre + " realizo un score de par de cancha en la ida con un total de " + ida + " golpes.")
+} else if (ida === 36) {console.log("El/la jugador/a " + nombre + " realizo un score de par de cancha en la ida con un total de " + ida + " golpes.");
 } else {
-    console.log("El/la jugador/a " + nombre + " realizo un score sobre par en la ida con un total de " + ida + " golpes.")
+    console.log("El/la jugador/a " + nombre + " realizo un score sobre par en la ida con un total de " + ida + " golpes.");
 };
 
 if (vuelta < 36) {
     console.log("El/la jugador/a " + nombre + " realizo un score bajo par en la vuelta con un total de " + vuelta + " golpes.");
-} else if (vuelta === 36) {console.log("El/la jugador/a " + nombre + " realizo un score de par de cancha en la vuelta con un total de " + vuelta + " golpes.")
+} else if (vuelta === 36) {console.log("El/la jugador/a " + nombre + " realizo un score de par de cancha en la vuelta con un total de " + vuelta + " golpes.");
 } else {
-    console.log("El/la jugador/a " + nombre + " realizo un score sobre par en la vuelta con un total de " + vuelta + " golpes.")
+    console.log("El/la jugador/a " + nombre + " realizo un score sobre par en la vuelta con un total de " + vuelta + " golpes.");
 };
 
 if (total < 72) {
     alert("FELICITACIONES! " + nombre + " por la vuelta de " + total + " golpes");
 } else if (total === 72) {
-    alert("EXCELENTE! " + nombre + " por conseguir el par de cancha con " + total + " golpes")
+    alert("EXCELENTE! " + nombre + " por conseguir el par de cancha con " + total + " golpes");
 } else if (total <= 80) {
-    alert("A seguir entrenando " + nombre + "que vas por buen camino con la vuelta realizada de " + total + " golpes")
+    alert("A seguir entrenando " + nombre + "que vas por buen camino con la vuelta realizada de " + total + " golpes");
 } else {
-    alert ("BURROOOOOOOOOOOOOOOOO dejá el golf por el bien de todos!")
+    alert ("BURROOOOOOOOOOOOOOOOO dejá el golf por el bien de todos!");
 };
 
 
 
 function tarjeta() {
-    console.log("Hiciste un total de", ida + vuelta, "golpes.");
-}
+    console.log("Hiciste un total de", ida + vuelta, "golpes.")
+};
 
 tarjeta()
