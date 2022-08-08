@@ -61,18 +61,27 @@ function tarjetaTotal() {
     hoyo18 = parseInt(prompt("Cuantos golpes realizó en el Hoyo 18:"));
     scoreTotal = hoyo1 + hoyo2 + hoyo3 + hoyo4 + hoyo5 + hoyo6 + hoyo7 + hoyo8 + hoyo9 + hoyo10 + hoyo11 + hoyo12 + hoyo13 + hoyo14 + hoyo15 + hoyo16 + hoyo17 + hoyo18
     if (scoreTotal > parCancha) {
-    console.log("El jugador", nombre, "realizó un score total de", scoreTotal, "golpes en un campo de juego de", cancha, "par", parCancha, "(", scoreTotal - parCancha,"sobre el par ).")
+    alert("El jugador", nombre, "realizó un score total de", scoreTotal, "golpes en un campo de juego de", cancha, "par", parCancha, "(", scoreTotal - parCancha,"sobre el par ).")
     } else if (scoreTotal < parCancha) {
-        console.log("El jugador", nombre, "realizó un score total de", scoreTotal, "golpes en un campo de", cancha, "par", parCancha, "(", parCancha - scoreTotal,"bajo el par ).")
+        alert("El jugador", nombre, "realizó un score total de", scoreTotal, "golpes en un campo de", cancha, "par", parCancha, "(", parCancha - scoreTotal,"bajo el par ).")
     } else {
-        console.log("El jugador", nombre, "realizó un score total de", scoreTotal, "golpes en un campo de", cancha, "par", parCancha, "(par de cancha).")
+        alert("El jugador", nombre, "realizó un score total de", scoreTotal, "golpes en un campo de", cancha, "par", parCancha, "(par de cancha).")
     }
 }
 
 tarjetaTotal()
 
 
-
+switch (scoreTotal) {
+    case (scoreTotal > 72):
+        console.log(nombre, "haz realizado un score sobre el par de cancha, trata de tomar mejores desiciones para ahorrar algunos golpes.")
+        break
+    case (scoreTotal < 72):
+        console.log(nombre, "estas listo para las grandes ligas!!")
+        break
+    default:
+        console.log(nombre, "estas jugando en par de cancha, segui asi!")
+}
 
 
 
